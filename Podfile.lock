@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.0)
+  - Cosmos (22.1.0)
   - DZNEmptyDataSet (1.8.1)
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
@@ -12,31 +13,38 @@ PODS:
     - NVActivityIndicatorView/Base (= 5.0.0)
   - NVActivityIndicatorView/Base (5.0.0)
   - ObjectMapper (4.2.0)
+  - TagListView (1.4.0)
 
 DEPENDENCIES:
+  - Cosmos (= 22.1)
   - DZNEmptyDataSet (= 1.8.1)
   - Kingfisher (= 5.14.0)
   - Moya (= 14.0)
   - NVActivityIndicatorView (= 5.0.0)
   - ObjectMapper (= 4.2.0)
+  - TagListView (= 1.4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - DZNEmptyDataSet
     - Kingfisher
     - Moya
     - NVActivityIndicatorView
     - ObjectMapper
+    - TagListView
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
 
-PODFILE CHECKSUM: 6964310cbc746da300cd1260a42a8180b079b212
+PODFILE CHECKSUM: 808393ecc2f7cc5457746999991724c1131a9c43
 
 COCOAPODS: 1.9.3

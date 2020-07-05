@@ -62,10 +62,10 @@ class MoviesMasterViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                // TODO: send movie data to the details view
-//                let object = objects[indexPath.row] as! NSDate
                 let controller = (segue.destination as! UINavigationController).topViewController as! MovieDetailViewController
-//                controller.detailItem = object
+                if let movie = moviesViewModel.movie(at: indexPath.row) {
+                    controller.movie = movie
+                }
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
                 detailViewController = controller

@@ -7,34 +7,46 @@
 //
 
 import UIKit
+import TagListView
+import Cosmos
 
 class MovieDetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    // MARK: - Outlets
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var castLabel: UILabel!
+    @IBOutlet weak var genresTagListView: TagListView!
+    @IBOutlet weak var ratingView: CosmosView!
 
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+    // MARK: - Properties
+    var movie: Movie? {
+        didSet {
+            configureView()
         }
     }
+    
 
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
     }
 
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
+    // MARK: - Helpers
+    private func configureView() {
+        if yearLabel == nil || titleLabel == nil || castLabel == nil || genresTagListView == nil || ratingView == nil {
+            return
         }
+        
+        if let yearInt = movie?.year {
+            yearLabel.text = "\(yearInt)"
+        }
+        titleLabel.text = movie?.title
+        castLabel.text = movie?.cast?.joined(separator: ", ")
+        genresTagListView.addTags(movie?.genres ?? [])
+        ratingView.rating = Double(movie?.rating ?? 0)
     }
-
-
 }
 

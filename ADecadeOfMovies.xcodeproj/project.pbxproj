@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		843E322F24B1D9BD00A33185 /* UISearchBarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E322E24B1D9BD00A33185 /* UISearchBarExtensions.swift */; };
+		843E323324B1E57100A33185 /* heroic-condensed-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E323024B1E57000A33185 /* heroic-condensed-regular.ttf */; };
+		843E323424B1E57100A33185 /* heroic-condensed-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E323024B1E57000A33185 /* heroic-condensed-regular.ttf */; };
+		843E323524B1E57100A33185 /* heroic-condensed-book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E323124B1E57000A33185 /* heroic-condensed-book.ttf */; };
+		843E323624B1E57100A33185 /* heroic-condensed-book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E323124B1E57000A33185 /* heroic-condensed-book.ttf */; };
+		843E323724B1E57100A33185 /* heroic-condensed-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E323224B1E57000A33185 /* heroic-condensed-medium.ttf */; };
+		843E323824B1E57100A33185 /* heroic-condensed-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 843E323224B1E57000A33185 /* heroic-condensed-medium.ttf */; };
 		84D1F31624B16F1200D51359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1F31524B16F1200D51359 /* AppDelegate.swift */; };
 		84D1F31824B16F1200D51359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1F31724B16F1200D51359 /* SceneDelegate.swift */; };
 		84D1F31A24B16F1200D51359 /* MoviesMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D1F31924B16F1200D51359 /* MoviesMasterViewController.swift */; };
@@ -106,6 +112,9 @@
 		4F66641EC578AD786DB2FB00 /* Pods-ADecadeOfMoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADecadeOfMoviesTests.release.xcconfig"; path = "Target Support Files/Pods-ADecadeOfMoviesTests/Pods-ADecadeOfMoviesTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B4467E03641F20B084E485F /* Pods_ADecadeOfMoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADecadeOfMoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		843E322E24B1D9BD00A33185 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtensions.swift; sourceTree = "<group>"; };
+		843E323024B1E57000A33185 /* heroic-condensed-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "heroic-condensed-regular.ttf"; sourceTree = "<group>"; };
+		843E323124B1E57000A33185 /* heroic-condensed-book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "heroic-condensed-book.ttf"; sourceTree = "<group>"; };
+		843E323224B1E57000A33185 /* heroic-condensed-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "heroic-condensed-medium.ttf"; sourceTree = "<group>"; };
 		84D1F31224B16F1200D51359 /* ADecadeOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADecadeOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D1F31524B16F1200D51359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D1F31724B16F1200D51359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -351,6 +360,9 @@
 				84E7E12E24B1CE070054FAC7 /* SF-Pro-Text-RegularItalic.otf */,
 				84E7E13824B1CE090054FAC7 /* SF-Pro-Text-Semibold.otf */,
 				84E7E13324B1CE080054FAC7 /* SF-Pro-Text-SemiboldItalic.otf */,
+				843E323124B1E57000A33185 /* heroic-condensed-book.ttf */,
+				843E323224B1E57000A33185 /* heroic-condensed-medium.ttf */,
+				843E323024B1E57000A33185 /* heroic-condensed-regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -460,6 +472,8 @@
 				84D1F32424B16F1400D51359 /* LaunchScreen.storyboard in Resources */,
 				84E7E14424B1CE0A0054FAC7 /* SF-Pro-Display-Heavy.otf in Resources */,
 				84E7E15424B1CE0A0054FAC7 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				843E323524B1E57100A33185 /* heroic-condensed-book.ttf in Resources */,
+				843E323724B1E57100A33185 /* heroic-condensed-medium.ttf in Resources */,
 				84E7E16C24B1CE0A0054FAC7 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				84E7E17024B1CE0A0054FAC7 /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				84E7E14624B1CE0A0054FAC7 /* SF-Pro-Text-Bold.otf in Resources */,
@@ -481,6 +495,7 @@
 				84E7E14824B1CE0A0054FAC7 /* SF-Pro-Text-Medium.otf in Resources */,
 				84E7E15024B1CE0A0054FAC7 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				84D1F31F24B16F1200D51359 /* Movies.storyboard in Resources */,
+				843E323324B1E57100A33185 /* heroic-condensed-regular.ttf in Resources */,
 				84E7E16624B1CE0A0054FAC7 /* SF-Pro-Display-BoldItalic.otf in Resources */,
 				84E7E17224B1CE0A0054FAC7 /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				84E7E15824B1CE0A0054FAC7 /* SF-Pro-Display-Regular.otf in Resources */,
@@ -499,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E7E14F24B1CE0A0054FAC7 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				843E323824B1E57100A33185 /* heroic-condensed-medium.ttf in Resources */,
 				84E7E14D24B1CE0A0054FAC7 /* SF-Pro-Display-Semibold.otf in Resources */,
 				84E7E16F24B1CE0A0054FAC7 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				84E7E15524B1CE0A0054FAC7 /* SF-Pro-Text-RegularItalic.otf in Resources */,
@@ -515,6 +531,7 @@
 				84E7E15D24B1CE0A0054FAC7 /* SF-Pro-Display-Medium.otf in Resources */,
 				84E7E15324B1CE0A0054FAC7 /* SF-Pro-Text-Heavy.otf in Resources */,
 				84E7E17924B1CE0A0054FAC7 /* SF-Pro-Display-Light.otf in Resources */,
+				843E323424B1E57100A33185 /* heroic-condensed-regular.ttf in Resources */,
 				84E7E16924B1CE0A0054FAC7 /* SF-Pro-Text-Semibold.otf in Resources */,
 				84E7E17324B1CE0A0054FAC7 /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				84D1F34724B1BF7F00D51359 /* movies.json in Resources */,
@@ -527,6 +544,7 @@
 				84E7E17724B1CE0A0054FAC7 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				84E7E17B24B1CE0A0054FAC7 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				84E7E15924B1CE0A0054FAC7 /* SF-Pro-Display-Regular.otf in Resources */,
+				843E323624B1E57100A33185 /* heroic-condensed-book.ttf in Resources */,
 				84E7E14724B1CE0A0054FAC7 /* SF-Pro-Text-Bold.otf in Resources */,
 				84E7E15B24B1CE0A0054FAC7 /* SF-Pro-Text-Light.otf in Resources */,
 			);

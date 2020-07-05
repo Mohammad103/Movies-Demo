@@ -44,4 +44,8 @@ class MoviesViewModel {
     func title(at index: Int) -> String? {
         return movies?[index].title
     }
+    
+    func movie(at index: Int) -> Movie? {
+        return movies?[index]
+    }
 }
