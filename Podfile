@@ -10,7 +10,6 @@ target 'ADecadeOfMovies' do
   pod 'Kingfisher', '5.14.0'
   pod 'NVActivityIndicatorView', '5.0.0'
   pod 'DZNEmptyDataSet', '1.8.1'
-  pod 'SkeletonView', '1.8.7'
   
 
   # Pods for ADecadeOfMovies

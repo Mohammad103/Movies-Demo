@@ -12,7 +12,6 @@ PODS:
     - NVActivityIndicatorView/Base (= 5.0.0)
   - NVActivityIndicatorView/Base (5.0.0)
   - ObjectMapper (4.2.0)
-  - SkeletonView (1.8.7)
 
 DEPENDENCIES:
   - DZNEmptyDataSet (= 1.8.1)
@@ -20,7 +19,6 @@ DEPENDENCIES:
   - Moya (= 14.0)
   - NVActivityIndicatorView (= 5.0.0)
   - ObjectMapper (= 4.2.0)
-  - SkeletonView (= 1.8.7)
 
 SPEC REPOS:
   trunk:
@@ -30,7 +28,6 @@ SPEC REPOS:
     - Moya
     - NVActivityIndicatorView
     - ObjectMapper
-    - SkeletonView
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
@@ -39,8 +36,7 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
-  SkeletonView: ba5370f41280b2f0a76918bb143c1294232bb4f4
 
-PODFILE CHECKSUM: 6d43dc546ab9a1aef55749e80018ac9520ba47db
+PODFILE CHECKSUM: 6964310cbc746da300cd1260a42a8180b079b212
 
 COCOAPODS: 1.9.3

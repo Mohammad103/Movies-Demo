@@ -8,39 +8,63 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MoviesMasterViewController: UIViewController {
 
-    var detailViewController: DetailViewController? = nil
+    // MARK: - Outlets & UI
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    var detailViewController: MovieDetailViewController? = nil
     var objects = [Any]()
 
     private lazy var moviesViewModel = MoviesViewModel()
 
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+        loadData()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        if splitViewController!.isCollapsed, let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        super.viewWillAppear(animated)
+    }
+    
+    
+    // MARK: - Helpers
+    private func setupUI() {
         if let split = splitViewController {
             let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? MovieDetailViewController
         }
         
+        navigationController?.navigationBar.shadowImage = UIImage()
+        searchBar.set(textColor: .white)
+        searchBar.setTextField(color: #colorLiteral(red: 0.9594017863, green: 0.3594591618, blue: 0.3556632996, alpha: 1))
+        searchBar.setPlaceholder(textColor: UIColor.white.withAlphaComponent(0.3))
+        searchBar.setSearchImage(color: .white)
+        searchBar.setClearButton(color: .white)
+        searchBar.backgroundImage = UIImage()
+    }
+    
+    private func loadData() {
         moviesViewModel.delegate = self
         moviesViewModel.loadMovies()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
-
     // MARK: - Segues
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 // TODO: send movie data to the details view
 //                let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                let controller = (segue.destination as! UINavigationController).topViewController as! MovieDetailViewController
 //                controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -48,18 +72,20 @@ class MasterViewController: UITableViewController {
             }
         }
     }
+}
 
-    // MARK: - Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+// MARK: - Table View
+extension MoviesMasterViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moviesViewModel.numberOfMovies()
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel!.text = moviesViewModel.title(at: indexPath.row)
         return cell
@@ -67,7 +93,8 @@ class MasterViewController: UITableViewController {
 }
 
 
-extension MasterViewController: MoviesViewModelDelegate{
+// MARK: - MoviesViewModel Delegate Methods
+extension MoviesMasterViewController: MoviesViewModelDelegate {
     func moviesLoadedSuccessfully() {
         tableView.reloadData()
     }
