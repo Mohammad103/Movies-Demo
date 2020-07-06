@@ -12,14 +12,19 @@ import ObjectMapper
 protocol MoviesViewModelDelegate: class {
     func moviesLoadedSuccessfully()
     func moviesFailedWithError(errorMessage: String)
+    func movieImagesLoadedSuccessfully()
+    func movieImagesFailedWithError(errorMessage: String)
 }
 
 class MoviesViewModel {
     
-    var movies: [Movie]?
+    // MARK: - Properties
+    private var movies: [Movie]?
+    private var movieImagesResponse: MovieImagesResponse?
     weak var delegate: MoviesViewModelDelegate?
     
     
+    // MARK: - Load data methods
     func loadMovies() {
         if let path = Bundle.main.path(forResource: "movies", ofType: "json") {
             do {
@@ -37,6 +42,26 @@ class MoviesViewModel {
         }
     }
     
+    func loadMovieImages(movie: Movie) {
+        guard let movieTitle = movie.title else { return }
+        
+        RequestManager.beginRequest(withTargetType: MovieRouter.self, andTarget: MovieRouter.movieFlickrImages(title: movieTitle), responseModel: MovieImagesResponse.self) { [weak self] (data, error) in
+            guard let weakSelf = self else { return }
+            if error != nil {
+                weakSelf.delegate?.movieImagesFailedWithError(errorMessage: error!.errorMessage)
+                return
+            }
+            
+            if let response = data as? MovieImagesResponse {
+                weakSelf.movieImagesResponse = response
+                weakSelf.delegate?.movieImagesLoadedSuccessfully()
+            } else {
+                weakSelf.delegate?.movieImagesFailedWithError(errorMessage: "ERR701 - Error happened while trying to load movies")  // ERR701 for parsing
+            }
+        }
+    }
+    
+    // MARK:- Datasource methods
     func numberOfMovies() -> Int {
         return movies?.count ?? 0
     }
@@ -47,5 +72,13 @@ class MoviesViewModel {
     
     func movie(at index: Int) -> Movie? {
         return movies?[index]
+    }
+    
+    func numberOfMovieImages() -> Int {
+        return movieImagesResponse?.photos?.count ?? 0
+    }
+    
+    func movieImage(at index: Int) -> MovieImage? {
+        return movieImagesResponse?.photos?[index]
     }
 }

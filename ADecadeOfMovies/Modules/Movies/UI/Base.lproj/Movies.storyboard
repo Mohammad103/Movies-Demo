@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,19 +54,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2009" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3k-Hz-Wam">
-                                <rect key="frame" x="173" y="20" width="68.5" height="56.5"/>
+                                <rect key="frame" x="173" y="64" width="68.5" height="56.5"/>
                                 <fontDescription key="fontDescription" name="HeroicCondensed-Medium" family="Heroic Condensed" pointSize="50"/>
                                 <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wen-c6-LL0">
-                                <rect key="frame" x="20" y="84" width="374" height="21.5"/>
+                                <rect key="frame" x="20" y="128" width="374" height="21.5"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
                                 <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UK-0X-JJL" customClass="TagListView" customModule="TagListView">
-                                <rect key="frame" x="20" y="144" width="374" height="20"/>
+                                <rect key="frame" x="20" y="188" width="374" height="20"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0wv-KG-r4m"/>
@@ -86,33 +87,75 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cast" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-gQ-tq6">
-                                <rect key="frame" x="20" y="113.5" width="374" height="14.5"/>
+                                <rect key="frame" x="20" y="157.5" width="374" height="14.5"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
                                 <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37y-sz-wNN" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="274" y="172" width="120" height="20"/>
+                                <rect key="frame" x="274" y="216" width="120" height="20"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="1Do-Qi-X14"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="38A-Vx-3R7">
+                                <rect key="frame" x="20" y="252" width="374" height="522"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="EUb-RK-x1J">
+                                    <size key="itemSize" width="128" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieImageCollectionViewCell" id="Njt-Um-ybz" customClass="MovieImageCollectionViewCell" customModule="ADecadeOfMovies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="15u-Gu-hhr">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w4D-eq-cfa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="w4D-eq-cfa" firstAttribute="leading" secondItem="15u-Gu-hhr" secondAttribute="leading" id="2aa-j3-Bt1"/>
+                                                <constraint firstAttribute="bottom" secondItem="w4D-eq-cfa" secondAttribute="bottom" id="9WE-nu-ku0"/>
+                                                <constraint firstItem="w4D-eq-cfa" firstAttribute="top" secondItem="15u-Gu-hhr" secondAttribute="top" id="Ib6-2E-Bys"/>
+                                                <constraint firstAttribute="trailing" secondItem="w4D-eq-cfa" secondAttribute="trailing" id="ytF-3z-Y1j"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieImageView" destination="w4D-eq-cfa" id="H31-dv-Ixq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JEX-9P-axG" id="Hs8-pO-HPK"/>
+                                    <outlet property="delegate" destination="JEX-9P-axG" id="Atd-d1-FXq"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0UK-0X-JJL" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="6D0-Io-9fb"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="0UK-0X-JJL" secondAttribute="trailing" constant="20" id="7P7-il-JgE"/>
                             <constraint firstItem="Tut-gQ-tq6" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="8ch-YT-jyD"/>
+                            <constraint firstItem="38A-Vx-3R7" firstAttribute="top" secondItem="37y-sz-wNN" secondAttribute="bottom" constant="16" id="Ai1-db-EdZ"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="bottom" secondItem="38A-Vx-3R7" secondAttribute="bottom" id="Bpu-m7-jVe"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Wen-c6-LL0" secondAttribute="trailing" constant="20" id="FAo-nX-1vq"/>
                             <constraint firstItem="0UK-0X-JJL" firstAttribute="top" secondItem="Tut-gQ-tq6" secondAttribute="bottom" constant="16" id="FDY-Go-kJa"/>
                             <constraint firstItem="Tut-gQ-tq6" firstAttribute="top" secondItem="Wen-c6-LL0" secondAttribute="bottom" constant="8" id="Rg9-p9-bhl"/>
+                            <constraint firstItem="38A-Vx-3R7" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="RrY-PY-lyv"/>
                             <constraint firstItem="Wen-c6-LL0" firstAttribute="top" secondItem="U3k-Hz-Wam" secondAttribute="bottom" constant="7.5" id="UF2-Ps-LwT"/>
                             <constraint firstItem="Wen-c6-LL0" firstAttribute="leading" secondItem="VUw-jc-0yf" secondAttribute="leading" constant="20" id="YbS-C6-7Hv"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="Tut-gQ-tq6" secondAttribute="trailing" constant="20" id="Yf3-5G-tHo"/>
                             <constraint firstItem="37y-sz-wNN" firstAttribute="top" secondItem="0UK-0X-JJL" secondAttribute="bottom" constant="8" id="cuZ-dt-2ps"/>
                             <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="37y-sz-wNN" secondAttribute="trailing" constant="20" id="huZ-xV-Equ"/>
                             <constraint firstItem="U3k-Hz-Wam" firstAttribute="top" secondItem="VUw-jc-0yf" secondAttribute="top" constant="20" id="sD4-6a-jrv"/>
+                            <constraint firstItem="VUw-jc-0yf" firstAttribute="trailing" secondItem="38A-Vx-3R7" secondAttribute="trailing" constant="20" id="srg-FF-ovg"/>
                             <constraint firstItem="U3k-Hz-Wam" firstAttribute="centerX" secondItem="VUw-jc-0yf" secondAttribute="centerX" id="uFD-Vq-NUX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
@@ -122,6 +165,7 @@
                     <connections>
                         <outlet property="castLabel" destination="Tut-gQ-tq6" id="y0W-wo-XXV"/>
                         <outlet property="genresTagListView" destination="0UK-0X-JJL" id="O8M-mG-IKt"/>
+                        <outlet property="imagesCollectionView" destination="38A-Vx-3R7" id="lQq-Gd-V1l"/>
                         <outlet property="ratingView" destination="37y-sz-wNN" id="ZNF-m8-PIy"/>
                         <outlet property="titleLabel" destination="Wen-c6-LL0" id="1Cf-2m-SLc"/>
                         <outlet property="yearLabel" destination="U3k-Hz-Wam" id="moA-F0-sAG"/>
@@ -238,6 +282,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bXW-gz-7ic"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>

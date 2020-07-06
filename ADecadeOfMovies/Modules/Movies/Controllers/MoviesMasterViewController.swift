@@ -102,4 +102,12 @@ extension MoviesMasterViewController: MoviesViewModelDelegate {
     func moviesFailedWithError(errorMessage: String) {
         // TODO: Handle error message
     }
+    
+    func movieImagesLoadedSuccessfully() {
+        // Do nothing
+    }
+    
+    func movieImagesFailedWithError(errorMessage: String) {
+        // Do nothing
+    }
 }

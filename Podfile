@@ -4,6 +4,7 @@
 target 'ADecadeOfMovies' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  inhibit_all_warnings!
   
   pod 'Moya', '14.0'
   pod 'ObjectMapper', '4.2.0'
