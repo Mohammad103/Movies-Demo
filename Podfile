@@ -9,10 +9,10 @@ target 'ADecadeOfMovies' do
   pod 'Moya', '14.0'
   pod 'ObjectMapper', '4.2.0'
   pod 'Kingfisher', '5.14.0'
-  pod 'NVActivityIndicatorView', '5.0.0'
   pod 'DZNEmptyDataSet', '1.8.1'
   pod 'TagListView', '1.4.0'
   pod 'Cosmos', '22.1'
+  pod 'ImageViewer.swift', '~> 3.0'
   
 
   # Pods for ADecadeOfMovies

@@ -2,6 +2,8 @@ PODS:
   - Alamofire (5.2.0)
   - Cosmos (22.1.0)
   - DZNEmptyDataSet (1.8.1)
+  - ImageViewer.swift (3.0.12):
+    - SDWebImage
   - Kingfisher (5.14.0):
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
@@ -9,18 +11,18 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - NVActivityIndicatorView (5.0.0):
-    - NVActivityIndicatorView/Base (= 5.0.0)
-  - NVActivityIndicatorView/Base (5.0.0)
   - ObjectMapper (4.2.0)
+  - SDWebImage (5.8.3):
+    - SDWebImage/Core (= 5.8.3)
+  - SDWebImage/Core (5.8.3)
   - TagListView (1.4.0)
 
 DEPENDENCIES:
   - Cosmos (= 22.1)
   - DZNEmptyDataSet (= 1.8.1)
+  - ImageViewer.swift (~> 3.0)
   - Kingfisher (= 5.14.0)
   - Moya (= 14.0)
-  - NVActivityIndicatorView (= 5.0.0)
   - ObjectMapper (= 4.2.0)
   - TagListView (= 1.4.0)
 
@@ -29,22 +31,24 @@ SPEC REPOS:
     - Alamofire
     - Cosmos
     - DZNEmptyDataSet
+    - ImageViewer.swift
     - Kingfisher
     - Moya
-    - NVActivityIndicatorView
     - ObjectMapper
+    - SDWebImage
     - TagListView
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
   Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  ImageViewer.swift: d4769c57ff8aef6da7e01bb9283f8554469b2498
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
 
-PODFILE CHECKSUM: ae1cd2aa3b93b7f4867c4bc97e4ab0211bf9abaa
+PODFILE CHECKSUM: b2eb6c92f709b6be12095fce979169e7453b1dc2
 
 COCOAPODS: 1.9.3

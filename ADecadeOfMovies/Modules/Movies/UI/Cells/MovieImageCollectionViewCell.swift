@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import ImageViewer_swift
 
 class MovieImageCollectionViewCell: UICollectionViewCell {
     
@@ -21,6 +22,7 @@ class MovieImageCollectionViewCell: UICollectionViewCell {
     // MARK: - Setup
     func configureCell(movieImage: MovieImage) {
         if let urlStr = movieImage.imageURL(), let url = URL(string: urlStr) {
+            movieImageView.setupImageViewer()
             movieImageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder"))
         }
     }
