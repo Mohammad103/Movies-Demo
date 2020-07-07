@@ -48,6 +48,7 @@ class MoviesMasterViewController: UIViewController {
     }
     
     private func setupUI() {
+        splitViewController?.delegate = self
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? MovieDetailViewController
@@ -56,11 +57,16 @@ class MoviesMasterViewController: UIViewController {
         tableView.tableFooterView = UIView()
         
         navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        searchBar.barTintColor = .white
+        searchBar.tintColor = .white
         searchBar.set(textColor: .white)
         searchBar.setTextField(color: UIColor.defaultAppThemeColor)
         searchBar.setPlaceholder(textColor: UIColor.white.withAlphaComponent(0.3))
         searchBar.setSearchImage(color: .white)
-        searchBar.searchTextField.clearButtonMode = .never
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.clearButtonMode = .never
+        }
         searchBar.backgroundImage = UIImage()
     }
     
@@ -82,6 +88,14 @@ class MoviesMasterViewController: UIViewController {
                 detailViewController = controller
             }
         }
+    }
+}
+
+
+// MARK: - UISplitViewController Delegate Methods
+extension MoviesMasterViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
     }
 }
 
