@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RevealingSplashView
 
 class MoviesMasterViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class MoviesMasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupAnimatedSplashScreen()
         setupUI()
         loadData()
     }
@@ -38,6 +40,13 @@ class MoviesMasterViewController: UIViewController {
     
     
     // MARK: - Helpers
+    private func setupAnimatedSplashScreen() {
+        let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "movies-icon-white"), iconInitialSize: CGSize(width: 125, height: 125), backgroundColor: UIColor.defaultAppThemeColor)
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        keyWindow?.addSubview(revealingSplashView)
+        revealingSplashView.startAnimation()
+    }
+    
     private func setupUI() {
         if let split = splitViewController {
             let controllers = split.viewControllers

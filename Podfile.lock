@@ -11,6 +11,7 @@ PODS:
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - ObjectMapper (4.2.0)
+  - RevealingSplashView (0.6.0)
   - SDWebImage (5.8.3):
     - SDWebImage/Core (= 5.8.3)
   - SDWebImage/Core (5.8.3)
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - Kingfisher (= 5.14.0)
   - Moya (= 14.0)
   - ObjectMapper (= 4.2.0)
+  - RevealingSplashView (= 0.6.0)
   - TagListView (= 1.4.0)
 
 SPEC REPOS:
@@ -32,6 +34,7 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - ObjectMapper
+    - RevealingSplashView
     - SDWebImage
     - TagListView
 
@@ -42,9 +45,10 @@ SPEC CHECKSUMS:
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
   SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
 
-PODFILE CHECKSUM: 4b046da5beae35df47b619c124cd4befe5e7306c
+PODFILE CHECKSUM: 1adb359978f22272942b0b8fca5bcd0282f3c77d
 
 COCOAPODS: 1.9.3

@@ -12,6 +12,7 @@ target 'ADecadeOfMovies' do
   pod 'TagListView', '1.4.0'
   pod 'Cosmos', '22.1'
   pod 'ImageViewer.swift', '~> 3.0'
+  pod 'RevealingSplashView', '0.6.0'
   
 
   # Pods for ADecadeOfMovies
