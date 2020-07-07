@@ -44,12 +44,14 @@ class MoviesMasterViewController: UIViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? MovieDetailViewController
         }
         
+        tableView.tableFooterView = UIView()
+        
         navigationController?.navigationBar.shadowImage = UIImage()
         searchBar.set(textColor: .white)
-        searchBar.setTextField(color: #colorLiteral(red: 0.9594017863, green: 0.3594591618, blue: 0.3556632996, alpha: 1))
+        searchBar.setTextField(color: UIColor.defaultAppThemeColor)
         searchBar.setPlaceholder(textColor: UIColor.white.withAlphaComponent(0.3))
         searchBar.setSearchImage(color: .white)
-        searchBar.setClearButton(color: .white)
+        searchBar.searchTextField.clearButtonMode = .never
         searchBar.backgroundImage = UIImage()
     }
     
@@ -63,7 +65,7 @@ class MoviesMasterViewController: UIViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let controller = (segue.destination as! UINavigationController).topViewController as! MovieDetailViewController
-                if let movie = moviesViewModel.movie(at: indexPath.row) {
+                if let movie = moviesViewModel.movie(at: indexPath.row, yearIndex: indexPath.section) {
                     controller.movie = movie
                 }
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -76,19 +78,44 @@ class MoviesMasterViewController: UIViewController {
 
 
 // MARK: - Table View
-extension MoviesMasterViewController: UITableViewDataSource {
+extension MoviesMasterViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return moviesViewModel.numberOfMoviesSections()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return moviesViewModel.numberOfMovies()
+        return moviesViewModel.numberOfMovies(yearIndex: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = moviesViewModel.title(at: indexPath.row)
+        cell.textLabel!.text = moviesViewModel.title(at: indexPath.row, yearIndex: indexPath.section)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return moviesViewModel.yearTitle(at: section)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.contentView.backgroundColor = .white
+            headerView.backgroundView?.backgroundColor = .black
+            headerView.textLabel?.textColor = .defaultAppThemeColor
+            headerView.textLabel?.font = UIFont.appFont(withSize: 14.0, andWeight: .regular)
+        }
+    }
+}
+
+
+// MARK: - UISearchBar Delegate Methods
+extension MoviesMasterViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        var searchKeyword: String? = searchText
+        if searchText.isEmpty {
+            searchKeyword = nil
+        }
+        moviesViewModel.searchMovies(keyword: searchKeyword)
     }
 }
 

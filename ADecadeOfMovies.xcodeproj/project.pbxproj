@@ -34,6 +34,8 @@
 		843E325524B1F66800A33185 /* MovieImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E325324B1F66800A33185 /* MovieImagesResponse.swift */; };
 		843E325724B1F67C00A33185 /* MovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E325624B1F67C00A33185 /* MovieImage.swift */; };
 		843E325824B1F67C00A33185 /* MovieImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843E325624B1F67C00A33185 /* MovieImage.swift */; };
+		8481482D24B4366300DA4A09 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481482C24B4366300DA4A09 /* UIColorExtension.swift */; };
+		8481482E24B4366300DA4A09 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481482C24B4366300DA4A09 /* UIColorExtension.swift */; };
 		84A7DC1624B2C1AD00357E37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7DC1524B2C1AD00357E37 /* Constants.swift */; };
 		84A7DC1724B2C1AD00357E37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7DC1524B2C1AD00357E37 /* Constants.swift */; };
 		84A7DC1A24B2C35B00357E37 /* MovieImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7DC1924B2C35B00357E37 /* MovieImageCollectionViewCell.swift */; };
@@ -149,6 +151,7 @@
 		843E325024B1F52000A33185 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		843E325324B1F66800A33185 /* MovieImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImagesResponse.swift; sourceTree = "<group>"; };
 		843E325624B1F67C00A33185 /* MovieImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImage.swift; sourceTree = "<group>"; };
+		8481482C24B4366300DA4A09 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		84A7DC1524B2C1AD00357E37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84A7DC1924B2C35B00357E37 /* MovieImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D1F31224B16F1200D51359 /* ADecadeOfMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADecadeOfMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,8 +328,8 @@
 		84D1F33B24B18A5700D51359 /* Data Access */ = {
 			isa = PBXGroup;
 			children = (
-				84D1F33C24B18A6400D51359 /* Models */,
 				843E323924B1EFA400A33185 /* MovieRouter.swift */,
+				84D1F33C24B18A6400D51359 /* Models */,
 			);
 			path = "Data Access";
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				84E7E18024B1CE340054FAC7 /* UIFontExtension.swift */,
 				843E322E24B1D9BD00A33185 /* UISearchBarExtensions.swift */,
 				843E324C24B1F38C00A33185 /* DictionaryExtension.swift */,
+				8481482C24B4366300DA4A09 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -712,6 +716,7 @@
 				84A7DC1624B2C1AD00357E37 /* Constants.swift in Sources */,
 				843E324124B1F1BE00A33185 /* AppError.swift in Sources */,
 				84D1F31A24B16F1200D51359 /* MoviesMasterViewController.swift in Sources */,
+				8481482D24B4366300DA4A09 /* UIColorExtension.swift in Sources */,
 				84D1F31C24B16F1200D51359 /* MovieDetailViewController.swift in Sources */,
 				84D1F34224B1BF4D00D51359 /* Movie.swift in Sources */,
 			);
@@ -726,6 +731,7 @@
 				843E324B24B1F32E00A33185 /* MoyaProviderExtensions.swift in Sources */,
 				843E324E24B1F38C00A33185 /* DictionaryExtension.swift in Sources */,
 				843E324824B1F2CA00A33185 /* ParsingManager.swift in Sources */,
+				8481482E24B4366300DA4A09 /* UIColorExtension.swift in Sources */,
 				84D1F34E24B1C75300D51359 /* MoviesResponse.swift in Sources */,
 				84D1F34A24B1BFF900D51359 /* MoviesViewModel.swift in Sources */,
 				84A7DC1724B2C1AD00357E37 /* Constants.swift in Sources */,

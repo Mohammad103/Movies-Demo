@@ -23,6 +23,7 @@ class MovieImageCollectionViewCell: UICollectionViewCell {
     func configureCell(movieImage: MovieImage) {
         if let urlStr = movieImage.imageURL(), let url = URL(string: urlStr) {
             movieImageView.setupImageViewer()
+            movieImageView.kf.indicatorType = .activity
             movieImageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder"))
         }
     }
