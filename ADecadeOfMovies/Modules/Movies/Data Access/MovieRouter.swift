@@ -14,7 +14,7 @@ enum MovieRouter {
     case movieFlickrImages(title: String)
 }
 
-extension MovieRouter: TargetType {
+extension MovieRouter: TargetType, CachePolicyGettable {
     
     var baseURL: URL {
         switch self {
