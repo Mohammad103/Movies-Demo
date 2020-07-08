@@ -74,10 +74,10 @@ class MoviesViewModel {
         }
         
         let moviesSearchList: [Movie] = movies?.filter {
-            guard let movieTitle = $0.title else {
+            guard let movieTitle = $0.title?.lowercased() else {
                 return false
             }
-            return movieTitle.contains(searchKeyword!)
+            return movieTitle.contains(searchKeyword!.lowercased())
         }.sorted { ($0.rating ?? 0) > ($1.rating ?? 0) } ?? []
         
         for movie in moviesSearchList {
@@ -99,6 +99,9 @@ class MoviesViewModel {
     
     // MARK:- Datasource methods
     private func yearKey(yearIndex: Int) -> Int {
+        if yearIndex >= moviesByYear.keys.count {
+            return 0
+        }
         return moviesByYear.keys.sorted(by: >)[yearIndex]
     }
     
