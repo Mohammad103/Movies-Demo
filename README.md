@@ -30,7 +30,7 @@ This sample is written in Swift.
 
 The Movies Demo project includes iOS target, iOS unit tests target.
 
-Movies Demo follows the Model-View-ViewModel (MVVM) design pattern and uses modern app development practices including Storyboards and Auto Layout. It also use many design patterns.
+Movies Demo follows the Model-View-ViewModel (MVVM) design pattern and uses modern app development practices including Storyboards and Auto Layout. It also uses many design patterns.
 
 ## Unit Tests
 
